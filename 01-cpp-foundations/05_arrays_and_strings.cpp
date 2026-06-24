@@ -1,6 +1,7 @@
+/*
 #include <iostream>
 using namespace std;
-
+// 1D array
 int main(){
     int arr[5];
     cin >> arr[0] >> arr[1] >> arr[2] >> arr[3] >> arr[4];
@@ -9,5 +10,22 @@ int main(){
         cout << arr[i] << endl;
     }
 
+    arr[3] = 100;
+    cout << arr[3];
+
+    return 0;
+}
+*/
+
+#include <iostream>
+using namespace std;
+// 2D array
+int main(){
+    int arr[3][5];  //3 rows and 5 columns
+
+    arr[1][3] = 78;
+    cout << arr[1][3] << endl;
+    cout << arr[0][0] << endl; // not initialized, so will store Garbadge value
+    cout << arr[1][2] << endl;
     return 0;
 }
