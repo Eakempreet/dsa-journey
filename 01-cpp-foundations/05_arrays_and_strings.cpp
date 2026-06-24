@@ -16,7 +16,7 @@ int main(){
     return 0;
 }
 */
-
+/*
 #include <iostream>
 using namespace std;
 // 2D array
@@ -27,5 +27,19 @@ int main(){
     cout << arr[1][3] << endl;
     cout << arr[0][0] << endl; // not initialized, so will store Garbadge value
     cout << arr[1][2] << endl;
+    return 0;
+}
+*/
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    string s = "Hello! world...";
+    int len = s.size();
+
+    cout << len << endl;
+    s[len-1] = 'x';
+    cout << s[len-1];
     return 0;
 }
