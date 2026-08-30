@@ -66,18 +66,22 @@ void print4(int n){
     }
 }
 void print5(int n){
-    /*
-    *****
-    ****
-    ***
-    **
-    *
+    /*                   cols
+    *****      row 1 -> star 5  -> sum = 1 + 5 = 6
+    ****       row 2 -> star 4  -> sum = 2 + 4 = 6
+    ***        row 3 -> star 3  -> sum = 3 + 3 = 6
+    **         row 4 -> star 2  -> sum = 4 + 2 = 6
+    *          row 5 -> star 1  -> sum = 5 + 1 = 6
+    
+    So number of stars to print in each line = 6 - row
+                                             = 5 + 1 - i
+                                             = n+1-i
     */
-    for (int i=1; i<=n; i++){
-        for(int j=1; j<=n-i+1; j++){
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n+1-i; j++){
             cout << "* ";
         }
-        cout << '\n';
+        cout << endl;
     }
 }
 
