@@ -111,6 +111,12 @@ void print7(int n){
     }
 }
 void print8(int n){
+
+    // * * * * * * * * * 
+    //   * * * * * * *   
+    //     * * * * *     
+    //       * * *       
+    //         *         
     for(int i=0; i<n; i++){
         //space
         for(int j=0; j<i; j++){
@@ -129,8 +135,79 @@ void print8(int n){
 }
 void print9(int n){
 
-}
+    //      * 
+    //     ***
+    //    *****
+    //   *******
+    //  *********
+    //  *********
+    //   *******
+    //    *****
+    //     ***
+    //      *
 
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n-i-1; j++){
+            cout << " " << " ";
+        }
+        for(int k=0; k<2*i+1; k++){
+            cout << "*" << " ";
+        }
+        cout << endl;
+    }
+    for(int i=0; i<n; i++){
+        for(int l=0; l<i; l++){
+            cout << " " << " ";
+        }
+        for(int m=0; m < 2*n - (2*i+1); m++){
+            cout << "*" << " ";
+        }
+        cout << endl;
+    }
+}
+void print10(int n){
+
+    // *
+    // * *
+    // * * * 
+    // * * * *
+    // * * *
+    // * *
+    // *
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<i+1; j++){
+            cout << "*" << " ";
+        }
+        cout << endl;
+    }
+    for(int i=0; i<n-1; i++){
+        for(int k=0; k<n-i-1; k++){
+            cout << "*" << " ";
+        }
+        cout << endl;
+    }
+}
+void print11(int n){
+    // 1
+    // 0 1
+    // 1 0 1
+    // 0 1 0 1
+    int num = 1;
+    for(int i=0; i<n; i++){
+        if(i%2==0) num = 1;
+        else num = 0;
+
+        for(int j=0; j<=i; j++){
+            cout << num << " ";
+            num = 1 - num;
+        }
+        cout << endl;
+    }
+}
+void print12(int n){
+    
+}
 
 int main(){
 
@@ -143,7 +220,7 @@ int main(){
         cout << "Enter: ";
         cin >> n;
 
-        print9(n);
+        print11(n);
 
     }
     
