@@ -229,7 +229,14 @@ void print12(int n){
     }
 }
 void print13(int n){
-
+    int num = 0;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=i; j++){
+            num++;
+            cout << num << " ";
+        }
+        cout << endl;
+    }
 }
 
 int main(){
