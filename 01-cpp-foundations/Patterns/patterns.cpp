@@ -272,6 +272,23 @@ void print15(int n){
         cout << endl;
     }
 }
+void print16(int n){
+    // A
+    // BB
+    // CCC
+    // DDDD
+    // EEEEE
+
+    char ch = 'A';
+    for(int i=0; i<n; i++){
+        ch = 'A' + i;
+        for(int j=0; j < i + 1; j++){
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+}
+
 int main(){
 
     int j;
@@ -283,7 +300,7 @@ int main(){
         cout << "Enter: ";
         cin >> n;
 
-        print15(n);
+        print16(n); 
 
     }
     
