@@ -229,6 +229,11 @@ void print12(int n){
     }
 }
 void print13(int n){
+    // 1
+    // 2 3
+    // 4 5 6
+    // 7 8 9 10
+     
     int num = 0;
     for(int i=1; i<=n; i++){
         for(int j=1; j<=i; j++){
@@ -238,7 +243,35 @@ void print13(int n){
         cout << endl;
     }
 }
+void print14(int n){
+    // A
+    // AB
+    // ABC
+    // ABCD
+    // ABCDE
+    // A-Z -> 65 to 90, n=5
 
+    for(int i=0; i<n; i++){
+        for(char j='A'; j< 'A' + i + 1; j++){
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
+void print15(int n){
+    // ABCDE
+    // ABCD
+    // ABC
+    // AB
+    // A
+
+    for(int i=0; i<n; i++){
+        for(char j='A'; j< 'A' + (n-i); j++){
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
 int main(){
 
     int j;
@@ -250,7 +283,7 @@ int main(){
         cout << "Enter: ";
         cin >> n;
 
-        print13(n);
+        print15(n);
 
     }
     
