@@ -288,6 +288,40 @@ void print16(int n){
         cout << endl;
     }
 }
+void print17(int n){
+    //     A
+    //    ABA
+    //   ABCBA
+    //  ABCDCBA
+    // ABCDEDCBA
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n-i-1; j++){
+            cout << " "; 
+        }
+        for(char k='A'; k <'A' + i + 1; k++){
+            cout << k;
+        }
+        for(char l='A'; l<'A'+i; l++){
+            cout << l;
+        }
+        cout << endl;
+    }
+}
+void print18(int n){
+    // E 
+    // D E 
+    // C D E 
+    // B C D E 
+    // A B C D E
+    // n=5
+
+    for(int i=0; i<n; i++){
+        char ch = 'A' + n;
+        for(char j=ch; j<='A'; j--)
+    }
+}
+
 
 int main(){
 
@@ -300,8 +334,7 @@ int main(){
         cout << "Enter: ";
         cin >> n;
 
-        print16(n); 
-
+        print17(n); 
     }
     
     return 0;
