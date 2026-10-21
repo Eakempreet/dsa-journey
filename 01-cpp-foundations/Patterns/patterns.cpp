@@ -2,7 +2,6 @@
 using namespace std;
 
 
-
 void print1(int n){
 
         /*
@@ -302,7 +301,7 @@ void print17(int n){
         for(char k='A'; k <'A' + i + 1; k++){
             cout << k;
         }
-        for(char l='A'; l<'A'+i; l++){
+        for(char l='A'+i-1; l>='A'; l--){
             cout << l;
         }
         cout << endl;
@@ -317,11 +316,159 @@ void print18(int n){
     // n=5
 
     for(int i=0; i<n; i++){
-        char ch = 'A' + n;
-        for(char j=ch; j<='A'; j--)
+        char ch = 'E' - i;
+        for(char j=ch; j<='E'; j++){
+            cout << j << " ";
+        }
+        cout << endl;
     }
 }
+void print19(int n){
+    // **********
+    // ****  ****
+    // ***    ***
+    // **      **
+    // *        *
+    // *        *
+    // **      **
+    // ***    ***
+    // ****  ****
+    // **********
+    // n = 5
 
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n-i; j++){
+            cout << "*";
+        }
+        for(int k=0; k<2*i; k++){
+            cout << " ";
+        }
+        for(int l=0; l<n-i; l++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    for(int i=0; i<n; i++){
+        for(int j=0; j<i+1; j++){
+            cout << "*";
+        }
+        for(int k=0; k<2*n-(2*i)-2; k++){
+            cout << " ";
+        }
+        for(int l=0; l<i+1; l++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+}
+void print20(int n){
+    // *        *
+    // **      **
+    // ***    ***
+    // ****  ****
+    // **********
+    // ****  ****
+    // ***    ***
+    // **      **
+    // *        *
+
+    for(int i=0; i<n; i++){
+        for(int j=0; j<i+1; j++){
+            cout << "*";
+        }
+        for(int k=0; k<2*n-(2*i)-2; k++){
+            cout << " ";
+        }
+        for(int l=0; l<i+1; l++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    for(int i=0; i<n-1; i++){
+        for(int j=0; j<n-i-1; j++){
+            cout << "*";
+        }
+        for(int k=0; k<2*i + 2; k++){
+            cout << " ";
+        }
+        for(int l=0; l<n-i-1; l++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+void print21(int n){
+    // *****
+    // *   *
+    // *   *
+    // *   *
+    // *****
+
+    // n=5
+
+    // for(int i=0; i<n; i++){
+    //     cout << "*";
+    // }
+    // cout << endl;
+    // for(int i=0; i<n-2; i++){
+    //     cout << "*";
+    //     for(int j=0; j<n-2; j++){
+    //         cout << " ";
+    //     }
+    //     cout << "*" << endl;
+    // }
+    // for(int i=0; i<n; i++){
+    //     cout << "*";
+    // }
+    // cout << endl;
+
+    // This one fails for edge case = 1 gives two rows instead of one
+
+    // Another way
+    for(int i=0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            if(i==0 || i==n-1 || j==0 || j==n-1) cout << "*";
+            else cout << " ";
+        }
+        cout << endl;
+    }
+}
+void print22(int n){
+    // 5 5 5 5 5 5 5 5 5 
+    // 5 4 4 4 4 4 4 4 5 
+    // 5 4 3 3 3 3 3 4 5 
+    // 5 4 3 2 2 2 3 4 5 
+    // 5 4 3 2 1 2 3 4 5 
+    // 5 4 3 2 2 2 3 4 5 
+    // 5 4 3 3 3 3 3 4 5 
+    // 5 4 4 4 4 4 4 4 5 
+    // 5 5 5 5 5 5 5 5 5
+
+    // n=5
+
+    // 0 0 0 0 0 0 0 0 0
+    // 0 1 1 1 1 1 1 1 0
+    // 0 1 2 2 2 2 2 1 0
+    // 0 1 2 3 3 3 2 1 0
+    // 0 1 2 3 4 3 2 1 0
+    // 0 1 2 3 3 3 2 1 0
+    // 0 1 2 2 2 2 2 1 0
+    // 0 1 1 1 1 1 1 1 0
+    // 0 0 0 0 0 0 0 0 0
+
+    for(int i=0; i<2*n-1; i++){
+        for(int j=0; j<2*n-1; j++){
+            int top = i;
+            int left = j;
+            int bottom = (2*n-2) - i;
+            int right = (2*n-2) - j;
+            
+            cout << n - min(min(top, bottom), min(left, right)) << " ";
+        }
+        cout << endl;
+    }
+}
 
 int main(){
 
@@ -334,7 +481,7 @@ int main(){
         cout << "Enter: ";
         cin >> n;
 
-        print17(n); 
+        print22(n); 
     }
     
     return 0;
