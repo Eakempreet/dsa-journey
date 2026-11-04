@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// https://leetcode.com/problems/palindrome-number/description/
+
 bool isPalindrome(int x) {
     if (x < 0) return false;
     long long n = abs((long long)x);

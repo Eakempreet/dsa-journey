@@ -2,6 +2,7 @@
 using namespace std;
 
 // https://takeuforward.org/practice/dsa/reverse-a-number?tab=code
+// https://leetcode.com/problems/reverse-integer/description/
 
 // My way but not entirely correct
 // void reverseNumber(int n) {
