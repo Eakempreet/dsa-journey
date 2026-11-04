@@ -18,6 +18,7 @@ using namespace std;
 
 // Loop:     whole numbers only, no rounding risk, works for every input
 // Formula:  floating point, edge cases to guard, only answers one question
+// complexity: O(log10(n))
 
 // Another way but less robust
 int countDigits(int n) {

@@ -14,6 +14,8 @@ int countDigit(int n) {
     return count;
 }
 
+// Complexity = O(log10(n))
+
 int main(){
     int num;
     cout << "Enter a number: ";
