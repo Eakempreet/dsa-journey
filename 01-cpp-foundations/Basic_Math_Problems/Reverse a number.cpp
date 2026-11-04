@@ -14,14 +14,27 @@ using namespace std;
 // }
 
 // Better way solution given as number only
-int reverseNumber(int n){
-    int rev = 0;
+// int reverseNumber(int n){
+//     int rev = 0;
+//     while(n>0){
+//         int digit = n%10;
+//         rev = rev * 10 + digit;
+//         n = n/10;
+//     }
+//     return rev;
+// }
+
+// much better way
+int reverse(int x) {
+    long long n = abs((long long)x);
+    long long rev = 0;
     while(n>0){
         int digit = n%10;
         rev = rev * 10 + digit;
         n = n/10;
     }
-    return rev;
+    if(rev > INT_MAX) return 0;
+    return x < 0 ? -rev: rev;
 }
 
 int main(){
